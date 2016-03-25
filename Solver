@@ -1,9 +1,8 @@
 from math import sin, cos, tan
 
-input("
-input("
-input("
+E=input("Measure of Vertical Angle (E): ")
+A=input("Measure of Azimuth Angle (A): ")
+Z=input("Height (Z): ")
 
-x=tan(rad)
-print(x)
+#Conversion
 
