@@ -1,8 +1,8 @@
 from math import sin, cos, tan
 
-E=input("Measure of Vertical Angle (E): ")
-A=input("Measure of Azimuth Angle (A): ")
-Z=input("Height (Z): ")
+E=float(input("Measure of Vertical Angle (E): "))
+A=float(input("Measure of Azimuth Angle (A): "))
+Z=float(input("Height (Z): "))
 
 #Conversion
 
