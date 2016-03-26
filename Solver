@@ -9,6 +9,5 @@ E2=90-A1
 A=A1/57.2958
 E=E2/57.2958
 
-
 OP=Z/tan(E) #O is the orgin
 print(OP)
