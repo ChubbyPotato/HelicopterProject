@@ -1,15 +1,15 @@
-from math import sin, cos, tan, sqrt, atan
+from math import sin, cos, tan, sqrt, asin, radians, degrees,acos
 
 #Vert=float(input("Measure of Vertical Angle (E): "))
 #Aye=float(input("Measure of Azimuth Angle (A): "))
 #Z=float(input("Height (Z): "))
-Vert=77.6
+Vert=77.9
 Aye=146.7
 Z=408
 
 E1= 90-Vert
-A=Aye/57.2958 #conversion
-E=E1/57.2958
+A=radians(Aye) #conversion
+E=radians(E1)
 
 OP=Z/tan(E) #O is the orgin OP is distance between heli and person
 
@@ -23,8 +23,14 @@ D=sqrt(y1*y1+x1*x1)
 
 Rcord=Z-61
 Range=sqrt(Rcord*Rcord+D*D)
-print("\n\nThe range of the antenna is: {0}".format(Range))
+print("\n\nThe range of the antenna is: {0:.{1}f}".format(Range,2))
 
-ele=atan(Z/D)
-recon=57.2958*ele
-print(recon)
+ele=asin(Z/Range)
+recon=degrees(ele)   #problem??
+NA=90-recon
+print("The vertical angle is {0:.{1}f}".format(NA,2))
+
+xdist=abs(x1-x)
+Az=acos(xdist*OP)
+AZ=degrees(Az)
+print(AZ)
