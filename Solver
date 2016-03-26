@@ -31,6 +31,7 @@ NA=90-recon
 print("The vertical angle is {0:.{1}f}".format(NA,2))
 
 xdist=abs(x1-x)
-Az=acos(xdist*OP)
+print(xdist)
+Az=acos(xdist/OP)
 AZ=degrees(Az)
 print(AZ)
