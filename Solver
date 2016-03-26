@@ -16,9 +16,12 @@ OP=Z/tan(E) #O is the orgin OP is distance between heli and person
 x=OP*cos(A)
 y=OP*sin(A)
 
-x1=x+106
-y1=y-40.6
+x1=x-40.6
+y1=y+106
 
 D=sqrt(y1*y1+x1*x1)
 
-print(D)
+Rcord=Z-61
+Range=sqrt(Rcord*Rcord+D*D)
+print("\n\nThe range of the antenna is: {0}".format(Range))
+
