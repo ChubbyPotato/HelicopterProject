@@ -1,8 +1,14 @@
 from math import sin, cos, tan
 
-E=float(input("Measure of Vertical Angle (E): "))
-A=float(input("Measure of Azimuth Angle (A): "))
+E1=float(input("Measure of Vertical Angle (E): "))
+A1=float(input("Measure of Azimuth Angle (A): "))
 Z=float(input("Height (Z): "))
 
 #Conversion
+E2=90-A1
+A=A1/57.2958
+E=E2/57.2958
 
+
+OP=Z/tan(E) #O is the orgin
+print(OP)
