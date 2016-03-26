@@ -1,13 +1,24 @@
-from math import sin, cos, tan
+from math import sin, cos, tan, sqrt
 
-E1=float(input("Measure of Vertical Angle (E): "))
-A1=float(input("Measure of Azimuth Angle (A): "))
-Z=float(input("Height (Z): "))
+#Vert=float(input("Measure of Vertical Angle (E): "))
+#A1=float(input("Measure of Azimuth Angle (A): "))
+#Z=float(input("Height (Z): "))
+Vert=78
+A1=330
+Z=408
 
-#Conversion
-E2=90-A1
-A=A1/57.2958
-E=E2/57.2958
+E1= 90-Vert
+A=A1/57.2958 #conversion
+E=E1/57.2958
 
-OP=Z/tan(E) #O is the orgin
-print(OP)
+OP=Z/tan(E) #O is the orgin OP is distance between heli and person
+
+x=OP*cos(A)
+y=OP*sin(A)
+
+x1=x+106
+y1=y-40.6
+
+D=sqrt(y1*y1+x1*x1)
+
+print(D)
