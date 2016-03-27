@@ -3,8 +3,8 @@ from math import sin, cos, tan, sqrt, asin, radians, degrees,acos
 #Vert=float(input("Measure of Vertical Angle (E): "))
 #Aye=float(input("Measure of Azimuth Angle (A): "))
 #Z=float(input("Height (Z): "))
-Vert=77.9
-Aye=146.7
+Vert=77.6
+Aye=23.1
 Z=408
 
 E1= 90-Vert
@@ -26,12 +26,14 @@ Range=sqrt(Rcord*Rcord+D*D)
 print("\n\nThe range of the antenna is: {0:.{1}f}".format(Range,2))
 
 ele=asin(Z/Range)
+print(ele)
 recon=degrees(ele)   #problem??
+print(recon)
 NA=90-recon
 print("The vertical angle is {0:.{1}f}".format(NA,2))
 
-xdist=abs(x1-x)
-print(xdist)
+xdist=abs(x1-40.6)
 Az=acos(xdist/OP)
+#print(xdist)
 AZ=degrees(Az)
-print(AZ)
+print("The Azimuth angle is {0:.{1}f}".format(AZ,2))
