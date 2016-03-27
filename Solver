@@ -18,22 +18,21 @@ y=OP*sin(A)
 
 x1=x-40.6
 y1=y+106
+print(x,y)
 
 D=sqrt(y1*y1+x1*x1)
+print(D)
 
 Rcord=Z-61
 Range=sqrt(Rcord*Rcord+D*D)
-print("\n\nThe range of the antenna is: {0:.{1}f}".format(Range,2))
+#print("\n\nThe range of the antenna is: {0:.{1}f}".format(Range,2))
 
 ele=asin(Z/Range)
-print(ele)
 recon=degrees(ele)   #problem??
-print(recon)
 NA=90-recon
-print("The vertical angle is {0:.{1}f}".format(NA,2))
+#print("The vertical angle is {0:.{1}f}".format(NA,2))
 
-xdist=abs(x1-40.6)
+xdist=abs(x-40.6)
 Az=acos(xdist/OP)
-#print(xdist)
 AZ=degrees(Az)
-print("The Azimuth angle is {0:.{1}f}".format(AZ,2))
+#print("The Azimuth angle is {0:.{1}f}".format(AZ,2))
