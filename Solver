@@ -22,9 +22,8 @@ bd=sqrt(D)
 Rcord=Z-61
 Range=sqrt(Rcord*Rcord+D)
 
-#good until here
 ele=atan(Rcord/bd)
-recon=degrees(ele)   #problem??
+recon=degrees(ele)
 NA=90-recon
 
 xdist=abs(x-40.6)
