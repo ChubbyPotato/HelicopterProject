@@ -1,11 +1,8 @@
 from math import sin, cos, tan, sqrt, asin, radians, degrees,acos,atan
 
-#Vert=float(input("Measure of Vertical Angle (E): "))
-#Aye=float(input("Measure of Azimuth Angle (A): "))
-#Z=float(input("Height (Z): "))
-Vert=77.6
-Aye=23.1
-Z=408
+Vert=float(input("Measure of Vertical Angle (E): "))
+Aye=float(input("Measure of Azimuth Angle (A): "))
+Z=float(input("Height (Z): "))
 
 E1= 90-Vert
 A=radians(Aye) #conversion
@@ -34,6 +31,6 @@ xdist=abs(x-40.6)
 Az=acos(xdist/bd)
 As=degrees(Az)
 
-print("The vertical angle is {0:.{1}f}".format(NA,2))
+print("\n\nThe vertical angle is {0:.{1}f}".format(NA,2))
 print("The Azimuth angle is {0:.{1}f}".format(As,2))
 print("The range of the antenna is: {0:.{1}f}".format(Range,2))
