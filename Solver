@@ -31,7 +31,7 @@ recon=degrees(ele)   #problem??
 NA=90-recon
 
 xdist=abs(x-40.6)
-Az=acos(xdist/OP)
+Az=acos(xdist/bd)
 As=degrees(Az)
 
 print("The vertical angle is {0:.{1}f}".format(NA,2))
