@@ -3,8 +3,8 @@ from math import sin, cos, tan, sqrt, asin, radians, degrees,acos
 #Vert=float(input("Measure of Vertical Angle (E): "))
 #Aye=float(input("Measure of Azimuth Angle (A): "))
 #Z=float(input("Height (Z): "))
-Vert=77.6
-Aye=23.1
+Vert=77.9
+Aye=146.7
 Z=408
 
 E1= 90-Vert
@@ -20,19 +20,21 @@ x1=x-40.6
 y1=y+106
 print(x,y)
 
-D=sqrt(x1*x1+y1*y1)
-print(D)
+D=x1*x1+y1*y1
+bd=sqrt(D)
 
 Rcord=Z-61
-Range=sqrt(Rcord*Rcord+D*D)
-#print("\n\nThe range of the antenna is: {0:.{1}f}".format(Range,2))
+Range=sqrt(Rcord*Rcord+D)
+print("\n\nThe range of the antenna is: {0:.{1}f}".format(Range,2))
 
-ele=asin(Z/Range)
-recon=degrees(ele)   #problem??
-NA=90-recon
+#good until here
+#ele=asin(Rcord/bd)
+#recon=degrees(ele)   #problem??
+#NA=90-recon
 #print("The vertical angle is {0:.{1}f}".format(NA,2))
 
-xdist=abs(x-40.6)
-Az=acos(xdist/OP)
-AZ=degrees(Az)
-#print("The Azimuth angle is {0:.{1}f}".format(AZ,2))
+#xdist=abs(x-40.6)
+#print(xdist)
+#Az=acos(xdist/OP)
+#As=degrees(Az)
+#print("The Azimuth angle is {0:.{1}f}".format(As,2))
