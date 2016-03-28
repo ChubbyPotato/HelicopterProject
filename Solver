@@ -29,7 +29,11 @@ NA=90-recon
 xdist=x-40.6
 Az=acos(xdist/bd)
 As=degrees(Az)
+if Aye >=180:
+    buh=180+As
+else:
+    buh=As
 
-print("\n\nThe vertical angle is {0:.{1}f}".format(NA,2))
-print("The Azimuth angle is {0:.{1}f}".format(As,2))
-print("The range of the antenna is: {0:.{1}f}".format(Range,2))
+print("\n\nThe vertical angle is {0:.{1}f} degrees".format(NA,2))
+print("The Azimuth angle is {0:.{1}f} degrees".format(buh,2))
+print("The range of the antenna is: {0:.{1}f} meters".format(Range,2))
