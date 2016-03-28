@@ -26,7 +26,7 @@ ele=atan(Rcord/bd)
 recon=degrees(ele)
 NA=90-recon
 
-xdist=abs(x-40.6)
+xdist=x-40.6
 Az=acos(xdist/bd)
 As=degrees(Az)
 
