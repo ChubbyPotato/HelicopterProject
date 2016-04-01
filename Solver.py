@@ -43,7 +43,7 @@ while Z>0:
         if y1 > 0:
             buh = 180-As
         else:
-            buh = 270-buh
+            buh = 270-As
     if x1 > 0:
         if y1>0:
             buh = As
