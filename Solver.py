@@ -39,10 +39,20 @@ while Z>0:
     Az=acos(xdist/bd)
     As=degrees(Az)
     Duh=Aye%360
-    if Duh <=180:
-        buh=As
-    else:
-        buh=360-As
+    if X1 < 0:
+        if Y1 > 0:
+            buh = 180-As
+        else:
+            buh = 270-buh
+    if X1 > 0:
+        if Y1>0:
+            buh = As
+        else:
+            buh = 360-As
+    #if Duh <=180:
+    #    buh=As
+    #else:d
+    #    buh=360-As
     
     print("\n\nThe vertical angle is {0:.{1}f} degrees".format(NA,2))
     print("The Azimuth angle is {0:.{1}f} degrees".format(buh,2))
