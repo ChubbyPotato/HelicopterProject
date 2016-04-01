@@ -39,13 +39,13 @@ while Z>0:
     Az=acos(xdist/bd)
     As=degrees(Az)
     Duh=Aye%360
-    if X1 < 0:
-        if Y1 > 0:
+    if x1 < 0:
+        if y1 > 0:
             buh = 180-As
         else:
             buh = 270-buh
-    if X1 > 0:
-        if Y1>0:
+    if x1 > 0:
+        if y1>0:
             buh = As
         else:
             buh = 360-As
