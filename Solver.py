@@ -36,13 +36,20 @@ while Z>0:
     NA=90-recon
     
     xdist=x-XL
-    Az=acos(xdist/bd)
+    Az=atan(y1/x1)
     As=degrees(Az)
-    Duh=Aye%360
-    if Duh <=180:
-        buh=As
+    b=abs(As)
+
+    if x1<0:
+        if y1>0:
+            buh=180-b
+        else:
+            buh=180+b
     else:
-        buh=360-As
+        if y1>0:
+            buh=b
+        else:
+            buh=360-b
     
     print("\n\nThe vertical angle is {0:.{1}f} degrees".format(NA,2))
     print("The Azimuth angle is {0:.{1}f} degrees".format(buh,2))
