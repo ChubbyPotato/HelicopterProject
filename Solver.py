@@ -46,7 +46,7 @@ while Z>0:
         elif y1<0:
             buh=180+b
         else:
-            buh=0
+            buh=180
     elif x1>0:
         if y1>0:
             buh=b
