@@ -43,13 +43,23 @@ while Z>0:
     if x1<0:
         if y1>0:
             buh=180-b
-        else:
+        elif y1<0:
             buh=180+b
-    else:
+        else:
+            buh=
+    elif x1>0:
         if y1>0:
             buh=b
-        else:
+        elif y1<0:
             buh=360-b
+        else:
+    else:
+        if y1 >0:
+            buh=90
+        elif y1<0:
+            buh=270
+        else:
+            buh=0
     
     print("\n\nThe vertical angle is {0:.{1}f} degrees".format(NA,2))
     print("The Azimuth angle is {0:.{1}f} degrees".format(buh,2))
